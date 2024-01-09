@@ -1,20 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
+import Title from './src/components/Title';
+import TaskList from './src/components/TaskList';
+import FloatButton from './src/components/FloatButton'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.safeAreaView}>
+      <View style={styles.viewContainer}>
+        <StatusBar style="auto" />
+        <Title text='Tarefas' />
+        <TaskList />
+        <FloatButton onPress={() => {}}/>
+      </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  safeAreaView: {
+    flex: 1,
+    position: 'relative',
+  },
+  viewContainer: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: 16,
   },
 });
