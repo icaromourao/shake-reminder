@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   list: {
-    marginTop: 24,
+    marginTop: 8,
   },
   card: {
     flex: 1,
